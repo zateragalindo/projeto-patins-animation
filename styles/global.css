@@ -23,8 +23,8 @@
 
   --text-sm: 0.875rem;
   --text-base: 1rem;
-  --text-lg: 2.5rem;
-  --text-xl: 4rem;
+  --text-lg: 1.5rem;
+  --text-xl: 2rem;
 }
 
 html, button {
@@ -52,4 +52,11 @@ h2 {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+@media (width >= 80em) {
+  :root {
+    --text-lg: 2.5rem;
+    --text-xl: 4rem;
+  }
 }

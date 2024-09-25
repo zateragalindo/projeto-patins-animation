@@ -6,6 +6,7 @@ section.hero {
   margin-inline: auto;
 
   display: flex;
+  flex-direction: column-reverse;
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
@@ -17,7 +18,7 @@ section.hero {
   & h1 div {
     display: inline-block;
     overflow: hidden;
-    height: 5rem;
+    height: 2.5rem;
     width: min-content;
     vertical-align: bottom;
   }
@@ -45,6 +46,7 @@ section.hero {
 
   & .buttons {
     display: flex;
+    flex-direction: column-reverse;
     gap: 2rem;
     margin-top: 2rem;
 
@@ -89,7 +91,7 @@ section.hero {
     display: block;
     width: 100%;
     max-width: 30.5rem;
-    height: 30.5rem;
+    height: 23.5rem;
 
     & .content {
       width: 100%;
@@ -203,5 +205,23 @@ section.hero {
   }
   100% {
     transform: translateY(-15rem);
+  }
+}
+
+@media (width >= 80em) {
+  section.hero {
+    flex-direction: row;
+
+    & .buttons {
+      flex-direction: row;
+    }
+  
+    & > div:nth-child(2) {
+      height: 30.5rem;
+    }
+
+    & h1 div {
+      height: 5rem;
+    }
   }
 }
