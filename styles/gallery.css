@@ -20,12 +20,19 @@ section.gallery {
 
   & .content {
     margin-top: 2rem;
-    display: grid;
-    grid-template-areas: 
-    "A B B"
-    "C C D"
-    ;
+    display: flex;
+    flex-direction: column;
     gap: 2.5rem;
+  }
+
+  @media (width >= 80rem) {
+    .content {
+      display: grid;
+      grid-template-areas: 
+      "A B B"
+      "C C D"
+      ;
+    }
   }
 
   & figure {
